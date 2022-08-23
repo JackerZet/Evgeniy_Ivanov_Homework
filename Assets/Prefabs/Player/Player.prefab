@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7334564011583914746}
   - component: {fileID: 64799430668568331}
   - component: {fileID: 762778996374150680}
+  - component: {fileID: 4026681646894977684}
+  - component: {fileID: 2731883614022375613}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -152,6 +154,49 @@ MonoBehaviour:
     m_Bits: 0
   canPush: 0
   strength: 1.1
+--- !u!114 &4026681646894977684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946516304497657757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192cfecf429eeb940a079fe9566225d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: {fileID: 11400000, guid: d0ec3025c4f87e943a8dffee6064ba03, type: 2}
+  curHealth: {fileID: 11400000, guid: eb0cd26b8f029bc47a3984c153fdb033, type: 2}
+--- !u!114 &2731883614022375613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946516304497657757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3504807ffe09868458031cedd043f91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _description: 
+  GameAction: {fileID: 11400000, guid: e95e4a295e839034f8e98d1b2276a9f7, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4026681646894977684}
+        m_TargetAssemblyTypeName: MyGame.PlayerHealthManager, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6077077729100223849
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +208,6 @@ GameObject:
   - component: {fileID: 4708206389156847745}
   - component: {fileID: 7977702081370530532}
   - component: {fileID: 980365899374932877}
-  - component: {fileID: 226074720117900352}
   m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
@@ -236,20 +280,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &226074720117900352
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6077077729100223849}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6347744611906385356
 PrefabInstance:
   m_ObjectHideFlags: 0
