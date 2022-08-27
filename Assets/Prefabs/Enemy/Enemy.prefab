@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2121661266920953048
+--- !u!1 &4633188609425824216
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 55045448818591952}
-  - component: {fileID: 5198384597011717826}
-  - component: {fileID: 4259545151617053078}
+  - component: {fileID: 4633188609425824213}
+  - component: {fileID: 4633188609425824218}
+  - component: {fileID: 4633188609425824219}
+  - component: {fileID: 2604707081385294456}
+  - component: {fileID: 2070098323552501866}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -18,29 +20,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &55045448818591952
+--- !u!4 &4633188609425824213
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121661266920953048}
+  m_GameObject: {fileID: 4633188609425824216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 207449160856820725}
+  - {fileID: 4633188610766224053}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5198384597011717826
+--- !u!114 &4633188609425824218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121661266920953048}
+  m_GameObject: {fileID: 4633188609425824216}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d31e303f99ec8d4ca8d7f57b1191356, type: 3}
@@ -49,22 +51,64 @@ MonoBehaviour:
   player: {fileID: 0}
   playerCurHealth: {fileID: 11400000, guid: eb0cd26b8f029bc47a3984c153fdb033, type: 2}
   dealDamage: {fileID: 11400000, guid: e95e4a295e839034f8e98d1b2276a9f7, type: 2}
-  curHealth: 10
   damage: 2
---- !u!65 &4259545151617053078
+--- !u!65 &4633188609425824219
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121661266920953048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 4633188609425824216}
+  m_Material: {fileID: 13400000, guid: 97c39086bf42034499bec475379a9db5, type: 2}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &7178799249007694974
+--- !u!114 &2604707081385294456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4633188609425824216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f886ff18b40889945a62dc476d1e21a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: {fileID: 11400000, guid: 36a557c8d3dbe6a4eb141be2e490ee3b, type: 2}
+  curHealth: 0
+--- !u!114 &2070098323552501866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4633188609425824216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3504807ffe09868458031cedd043f91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _description: 
+  GameAction: {fileID: 11400000, guid: e95e4a295e839034f8e98d1b2276a9f7, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2604707081385294456}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &4633188610766224058
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,9 +116,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 207449160856820725}
-  - component: {fileID: 5165610705943888190}
-  - component: {fileID: 997888618094086484}
+  - component: {fileID: 4633188610766224053}
+  - component: {fileID: 4633188610766224055}
+  - component: {fileID: 4633188610766224052}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -82,36 +126,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &207449160856820725
+--- !u!4 &4633188610766224053
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7178799249007694974}
+  m_GameObject: {fileID: 4633188610766224058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 55045448818591952}
+  m_Father: {fileID: 4633188609425824213}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5165610705943888190
+--- !u!33 &4633188610766224055
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7178799249007694974}
+  m_GameObject: {fileID: 4633188610766224058}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &997888618094086484
+--- !u!23 &4633188610766224052
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7178799249007694974}
+  m_GameObject: {fileID: 4633188610766224058}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

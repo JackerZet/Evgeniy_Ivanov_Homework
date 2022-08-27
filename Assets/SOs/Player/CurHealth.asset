@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76025d81a71f3c64499074b7d15ca264, type: 3}
   m_Name: CurHealth
   m_EditorClassIdentifier: 
-  value: 100
+  value: 16
