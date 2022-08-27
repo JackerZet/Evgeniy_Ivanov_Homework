@@ -10,7 +10,6 @@ namespace MyGame
         [SerializeField] private IntVariable playerCurHealth;
         [SerializeField] private IntEventChannel dealDamage;
 
-        public int curHealth = 10;
         public int damage = 2;
 
         private void OnTriggerEnter(Collider other)
