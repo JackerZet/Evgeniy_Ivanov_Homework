@@ -5,6 +5,16 @@ public class DayToNight : MonoBehaviour
 {
     [SerializeField] private float turn = 0.1f;
 
+    public bool Night
+    {
+        get
+        {
+            if (transform.rotation.x <= 0f)
+                return true;
+            else
+                return false;
+        }
+    }
     private void OnEnable()
     {
         StartCoroutine(RotateSun());
