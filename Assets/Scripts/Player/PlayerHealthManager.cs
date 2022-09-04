@@ -8,13 +8,24 @@ namespace MyGame
         [SerializeField] private IntVariable maxHealth;
         [SerializeField] private IntVariable curHealth;
 
+        private Animator anim;       
+
         private void Awake()
         {
-            curHealth.value = maxHealth.value;
+            curHealth.value = maxHealth.value;            
         }               
         public void TakeDamage(int amount)
         {
             curHealth.value -= amount;
+            if(curHealth.value <= 0)
+            {
+                OnDeath();
+            }
+        }
+        public void OnDeath()
+        {
+            GetComponentInChildren<Animator>().enabled = false;
+            GetComponentInChildren<PlayerAnimatorController>().enabled = false;
         }
     }
 }
