@@ -14,7 +14,8 @@ namespace MyGame
 
         private void OnTriggerEnter(Collider other)
         {
-            TryDealDamage();
+            if(CompareTag("Player"))
+                TryDealDamage();
         }
         private void TryDealDamage()
         {
