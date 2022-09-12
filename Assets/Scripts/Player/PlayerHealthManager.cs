@@ -6,9 +6,7 @@ namespace MyGame
     public class PlayerHealthManager : MonoBehaviour
     {
         [SerializeField] private IntVariable maxHealth;
-        [SerializeField] private IntVariable curHealth;
-
-        private Animator anim;       
+        [SerializeField] private IntVariable curHealth;       
 
         private void Awake()
         {
